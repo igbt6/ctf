@@ -1,0 +1,24 @@
+socat(1)                                                              socat(1)[m
+[m
+[1mNAME[0m[m
+       socat - Multipurpose relay (SOcket CAT)[m
+[m
+[1mSYNOPSIS[0m[m
+       socat [options] <address> <address>[m
+       socat -V[m
+       socat -h[h[h]] | -?[?[?]][m
+       filan[m
+       procan[m
+[m
+[1mDESCRIPTION[0m[m
+       [1mSocat[0m  is  a  command  line based utility that establishes two bidirec-[m
+       tional byte streams  and  transfers  data  between  them.  Because  the[m
+       streams  can be constructed from a large set of different types of data[m
+       sinks and sources (see address types),  and  because  lots  of  address[m
+       options  may be applied to the streams, socat can be used for many dif-[m
+       ferent purposes.[m
+[m
+       [1mFilan[0m is a utility  that  prints  information  about  its  active  file[m
+       descriptors  to  stdout.  It  has been written for debugging [1msocat[0m, but[m
+       might be useful for other purposes too. Use the -h option to find  more[m
+[7m Manual page socat(1) line 1 (press h for help or q to quit)[27m[K
