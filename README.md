@@ -6,4 +6,4 @@ my ctf adventures
 * `gdb`
 * `cutter (radare2)` - [https://github.com/radareorg/cutter]
 * `gef` - [https://github.com/hugsy/gef]
-* `androidguard` - [https://github.com/androguard/androguard]
+* `androguard` - [https://github.com/androguard/androguard]
