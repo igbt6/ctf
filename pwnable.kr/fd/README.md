@@ -5,7 +5,7 @@
 $ ./fd 4660
 ```
 
-2. Type LETMEWIN  
+2. Type LETMEWIN\n 
 
 3. You'll get the flag:  
 ```
