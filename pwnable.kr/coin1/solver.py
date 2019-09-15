@@ -5,9 +5,9 @@ import re
 def create_line(start, end):
     if start == end:
         return str(start)
-    return ' '.join(map(str, [n for n in range(start, end)]))
+    return ' '.join([str(n) for n in range(start, end)])
 
-print create_line(1, 1)
+print create_line(1, 3)
 
 r = remote('pwnable.kr', 9007)
 
@@ -20,20 +20,24 @@ for _ in range(100):
     print N, C
 
     start = 0
-    end = N//2
+    end = N-1
     for i in range(C):
-        r.sendline(create_line(start, end))
-        weight = int(r.recvline())
-        print weight, start, end
+        mid = start + (end-start)/2
+        r.sendline(create_line(start, mid))
+        line = r.recvline()
+        print line
+        weight = int(line)
+        print " start: ",start, " mid: ",mid, " end: ",end, " weight: ", weight
+        if weight == 9:
+            break
         if start >= end:
             break
-        if weight % 10 == 0:
-            start = end
-            end = end*2
+        if weight%10 != 0:
+            end = mid
         else:
-            start = start
-            end = start + (end - start)//2
-    #r.sendline(str(start))
+            start = mid
+
+    r.sendline(str(mid))
     r.recvline()
   
 r.interactive()
