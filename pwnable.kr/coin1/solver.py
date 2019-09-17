@@ -5,7 +5,7 @@ import re
 def create_line(start, end):
     if start == end:
         return str(start)
-    return ' '.join([str(n) for n in range(start, end)])
+    return ' '.join([str(n) for n in range(start, end+1)])
 
 print create_line(1, 3)
 
@@ -22,10 +22,10 @@ for _ in range(100):
     start = 0
     end = N-1
     for i in range(C):
-        mid = start + (end-start)/2
+        mid = start + (end-start)//2
         r.sendline(create_line(start, mid))
         line = r.recvline()
-        print line
+        #print line
         weight = int(line)
         print " start: ",start, " mid: ",mid, " end: ",end, " weight: ", weight
         if weight == 9:
@@ -38,7 +38,7 @@ for _ in range(100):
             start = mid
 
     r.sendline(str(mid))
-    r.recvline()
+    #r.recvline()
   
 r.interactive()
 
