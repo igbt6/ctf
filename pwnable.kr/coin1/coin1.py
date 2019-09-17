@@ -5,12 +5,9 @@ import re
 def create_line(start, end):
     if start == end:
         return str(start)
-    return ' '.join([str(n) for n in range(start, end+1)])
-
-print create_line(1, 3)
+    return ' '.join([str(n) for n in range(start, end)])
 
 r = remote('pwnable.kr', 9007)
-
 r.recvuntil("- Ready? starting in 3 sec... -")
 
 for _ in range(100):
@@ -20,25 +17,24 @@ for _ in range(100):
     print N, C
 
     start = 0
-    end = N-1
+    end = N
     for i in range(C):
-        mid = start + (end-start)//2
+        mid = (end+start)//2
         r.sendline(create_line(start, mid))
-        line = r.recvline()
-        #print line
-        weight = int(line)
-        print " start: ",start, " mid: ",mid, " end: ",end, " weight: ", weight
-        if weight == 9:
-            break
+        #print create_line(start, mid)
+        weight = int(r.recvline())
+        #print "start: ",start, " mid: ",mid, " end: ",end, " weight: ", weight
+        #if weight == 9:
+        #    break
         if start >= end:
             break
         if weight%10 != 0:
             end = mid
         else:
             start = mid
-
-    r.sendline(str(mid))
-    #r.recvline()
+    r.sendline(str(start))
+    r.recv(256)
+    #print r.recv(1024)
+    #r.recvuntil("Correct!")
   
 r.interactive()
-
