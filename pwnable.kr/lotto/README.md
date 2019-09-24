@@ -46,8 +46,28 @@ All smaller values are not characters and you cannot easily write them down into
 It's good to have all the signs the same in the input buffer, it will give you a bigger chance to get 6 matches if only one char in `lotto` buffer will be the same as in our `submit`.
 
 
+5. I created a simple script `lotto-solver.py` an put that onto server:
+```
+ssh lotto@pwnable.kr -p2222
+mkdir /tmp/aqw
+cd /tmp/aqw
+ln -s /home/lotto/flag flag
+From the HOST:
+scp -P2222 lotto-solver.py lotto@pwnable.kr:/tmp/aqw
+```
 
-After running a few times my `lotto-solver.py` i got the flag:
+After running a few times my `lotto-solver.py` on the server i got the flag:
+```
+lotto@prowl:/tmp/aqw$ python lotto-solver.py 
+[+] Starting local process '/home/lotto/lotto': pid 81608
+- Select Menu -
+1. Play Lotto
+2. Help
+3. Exit
+
+Submit your 6 lotto bytes : 
+sorry mom... I FORGOT to check duplicate numbers... :(
+```
 
 ```
 FLAG: {sorry mom... I FORGOT to check duplicate numbers... :(}
