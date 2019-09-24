@@ -35,7 +35,7 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # run process
 if RUN_ON_SERVER:
-    # on pwnable.kr server you have to run the script from /tmp/ and create ln -s /home/input/flag flag 
+    # on pwnable.kr server you have to run the script from /tmp/ and create ln -s /home/input/flag flag
     p = subprocess.Popen(["/home/input2/input"]+argv, stdin=stdin_read, stderr=stderr_read, env=envs)
     os.system("ln -s /home/input2/flag")
 else:
