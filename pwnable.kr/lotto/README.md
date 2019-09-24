@@ -50,5 +50,5 @@ It's good to have all the signs the same in the input buffer, it will give you a
 After running a few times my `lotto-solver.py` i got the flag:
 
 ```
-FLAG: {}
+FLAG: {sorry mom... I FORGOT to check duplicate numbers... :(}
 ```
