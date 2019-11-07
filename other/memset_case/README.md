@@ -1,5 +1,5 @@
-https://godbolt.org/z/R6Rztm
-https://godbolt.org/z/RSRKzk
+* https://godbolt.org/z/R6Rztm  
+* https://godbolt.org/z/RSRKzk
 
 ```sh
 g++ memset.cpp -std=c++14 -Wall -Wextra -Wpedantic -O0 -o memsetcpp
