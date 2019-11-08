@@ -8,7 +8,6 @@ static void readPasswd(char* buf, size_t len)
     memcpy(buf, "ABCDDCBA", strlen("ABCDDCBA"));
 }
 
-
 struct UserData
 {
     char passwd[64];
@@ -25,6 +24,14 @@ struct UserData
     }
 };
 
+// uint8_t *addr = NULL;
+// void foo()
+// {
+//     UserData ud;
+//     printf("%s\n", ud.passwd);
+//     addr = (uint8_t*)ud.passwd;   
+// }
+
 int main() {
     uint8_t *addr = NULL;
     {
@@ -32,6 +39,7 @@ int main() {
         printf("%s\n", ud.passwd);
         addr = (uint8_t*)ud.passwd;
     }
+    //foo();
     printf("%s\n", addr);
     printf("Bye!\n");
 }
