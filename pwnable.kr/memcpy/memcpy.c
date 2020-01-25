@@ -24,7 +24,9 @@ char* fast_memcpy(char* dest, const char* src, size_t len){
 	// 64-byte block fast copy
 	if(len >= 64){
 		i = len / 64;
+		printf(">>> BEFORE LEN: 0x%x", len);
 		len &= (64-1);
+		printf(">>> LEN: 0x%x", len);
 		while(i-- > 0){
 			__asm__ __volatile__ (
 			"movdqa (%0), %%xmm0\n"
