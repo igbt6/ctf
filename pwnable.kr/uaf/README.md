@@ -99,3 +99,14 @@ And we get the shell:
 ```
 FLAG: {yay_f1ag_aft3r_pwning}
 ```
+
+
+0x0000000000400fb8 <+244>:   je     0x401000 <main+316>
+0x0000000000400fba <+246>:   cmp    eax,0x3
+0x0000000000400fbd <+249>:   je     0x401076 <main+434>
+0x0000000000400fc3 <+255>:   cmp    eax,0x1
+0x0000000000400fc6 <+258>:   je     0x400fcd <main+265>
+
+b *main+316
+b *main+434
+b *main+265
