@@ -13,6 +13,5 @@ Please use all caps for the message.
 __SOLUTION__
 
 Just use the table to get a key.
-Thanks to [ugtan](https://github.com/ugtan) for doing the table thing :)
 
 FLAG - `picoCTF{SECRETMESSAGE}`
