@@ -60,7 +60,7 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | Task                   | points |
 |------------------------|--------|
 | [`buffer overflow 0`](Binary-Exploitation/buffer%20overflow%200/)    | 150    |
-| [`leak me`](Binary-Exploitation/leak%20me%20/)              | 150    |
+| [`leak-me`](Binary-Exploitation/leak-me/)              | 200    |
 | [`buffer overflow 1`](Binary-Exploitation/buffer%20overflow%201/)    | 200   |
 
 * __Forensics__
