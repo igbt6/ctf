@@ -1,5 +1,5 @@
 # ctf
-my ctf adventures
+All my ctf related stuff in one place :)
 
 
 ## Tools I use
