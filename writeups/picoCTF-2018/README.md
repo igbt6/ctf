@@ -1,6 +1,6 @@
 # picoCTF-2018 Writeups
 
-My writeups to picoCTF 2018 problems  
+My writeups to picoCTF 2018 problems
 Writeup template mainly based on [the great mzfr template](https://github.com/mzfr/ctf-writeups/tree/master/picoCTF-2018).
 
 # Index
@@ -36,6 +36,7 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | [`Reversing Warmup 2`](Reversing/Reversing_Warmup_2/)   | 50     |
 | [`Assembly-0`](Reversing/Assembly-0/)           | 150    |
 | [`be-quick-or-be-dead-1`](Reversing/be-quick-or-be-dead-1/)| 200    |
+| [`quackme`](Reversing/quackme/)| 200    |
 
 * __Cryptography__
 
