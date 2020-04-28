@@ -20,21 +20,21 @@ Third questions -> [octal-to-text](http://www.unit-conversion.info/texttools/oct
 Here's a walkthrough:
 
 ```
-> nc 2018shell2.picoctf.com 1225
+$ nc 2018shell.picoctf.com 31711
 We are going to start at the very beginning and make sure you understand how data is stored.
-cake
-Please give me the 01100011 01100001 01101011 01100101 as a word.
+toxic
+Please give me the 01110100 01101111 01111000 01101001 01100011 as a word.
 To make things interesting, you have 30 seconds.
 Input:
-cake
-Please give me the 6170706c65 as a word.
+toxic
+Please give me the 74696d65 as a word.
 Input:
-apple
-Please give me the  143 157 165 143 150 as a word.
+time
+Please give me the  143 157 155 160 165 164 145 162 as a word.
 Input:
-couch
+computer
 You got it! You're super quick!
-Flag: picoCTF{delusions_about_finding_values_451a9a74}
+Flag: picoCTF{delusions_about_finding_values_68051dea}
 ```
 
-FLAG - `picoCTF{delusions_about_finding_values_451a9a74}`
+FLAG - `picoCTF{delusions_about_finding_values_68051dea}`
