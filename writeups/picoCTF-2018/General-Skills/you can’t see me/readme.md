@@ -2,7 +2,7 @@
 
 __PROBLEM__
 
-’…reading transmission… Y.O.U. .C.A.N.‘.T. .S.E.E. .M.E. …transmission ended…’ Maybe something lies in /problems/you-can-t-see-me_2_cfb71908d8368e3062423b45959784aa.
+...reading transmission... Y.O.U. .C.A.N.'.T. .S.E.E. .M.E. ...transmission ended...' Maybe something lies in /problems/you-can-t-see-me_0_8fc4b46df0f4dd36b87a28877fcf9ea2.
 
 __HINT__
 
@@ -15,14 +15,22 @@ __SOLUTION__
 
 Go to the given directory and run `ls -la` which gives us
 ```
-drwxr-xr-x   2 root       root        4096 Sep 28 08:34 .
--rw-rw-r--   1 hacksports hacksports    57 Sep 28 08:34 .
-drwxr-x--x 576 root       root       53248 Sep 30 03:50 ..
+luk6xff@pico-2018-shell:~$ cd /problems/you-can-t-see-me_0_8fc4b46df0f4dd36b87a28877fcf9ea2
+luk6xff@pico-2018-shell:/problems/you-can-t-see-me_0_8fc4b46df0f4dd36b87a28877fcf9ea2$ ls -la
+total 60
+drwxr-xr-x   2 root       root        4096 Mar 25  2019 .
+-rw-rw-r--   1 hacksports hacksports    57 Mar 25  2019 .
+drwxr-x--x 556 root       root       53248 Mar 25  2019 ..
+
+
+
 ```
 
 If you'll use `tab` to auto complete the file name you'll see that there is a file name `.  ` So just use `cat` command to see the content of the file.
 ```
-> cat `.  `
+luk6xff@pico-2018-shell:/problems/you-can-t-see-me_0_8fc4b46df0f4dd36b87a28877fcf9ea2$ cat . .\ \
+cat: .: Is a directory
+picoCTF{j0hn_c3na_paparapaaaaaaa_paparapaaaaaa_e3d80588}
 ```
 
-FLAG - `picoCTF{j0hn_c3na_paparapaaaaaaa_paparapaaaaaa_cf5156ef}`
+FLAG - `picoCTF{j0hn_c3na_paparapaaaaaaa_paparapaaaaaa_e3d80588}`
