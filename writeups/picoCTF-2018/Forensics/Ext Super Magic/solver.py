@@ -33,7 +33,7 @@ with open(EXT2_IMG_FIXED, "rb") as ext2_img:
 
 '''
     2nd way with pwn
-'''
+'''Some odd traffic has been detected on the network, can you identify it? More info here. Connect with nc 2018shell.picoctf.com 27108 to help us answer some questions.
 # from pwn import *
 
 # with open(EXT2_IMG, 'rb') as ext2_img:
