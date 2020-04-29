@@ -78,6 +78,7 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | [`hex editor`](Forensics/hex%20editor/)           | 150    |
 | [`Truly an Artist`](Forensics/Truly%20an%20Artist/)              | 200    |
 | [`now you don't`](Forensics/now%20you%20don't%20/)              | 200    |
+| [`Ext Super Magic`](Forensics/Ext%20Super%20Magic/)               | 250    |
 | [`What's My Name?`](Forensics/What's%20My%20Name?/)              | 250    |
 | [`Malware Shops`](Forensics/Malware%20Shops/)              | 250    |
 | [`LoadSomeBits`](Forensics/LoadSomeBits/)              | 550    |
