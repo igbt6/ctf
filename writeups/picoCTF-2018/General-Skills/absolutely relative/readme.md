@@ -2,64 +2,41 @@
 
 __PROBLEM__
 
-In a filesystem, everything is relative ¯_(ツ)_/¯. Can you find a way to get a flag from this [program](absolutely-relative)? You can find it in /problems/absolutely-relative_0_d4f0f1c47f503378c4bb81981a80a9b6 on the shell server. [Source](absolutely-relative.c).
+In a filesystem, everything is relative ¯\_(ツ)_/¯. Can you find a way to get a flag from this [program](https://2018shell.picoctf.com/static/725b533a89a0e70b85b37ce2965da003/absolutely-relative)? You can find it in /problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee on the shell server. [Source](https://2018shell.picoctf.com/static/725b533a89a0e70b85b37ce2965da003/absolutely-relative.c).
 
 __HINT__
 
 Do you have to run the program in the same directory? (⊙.☉)7
-
 Ever used a text editor? Check out the program 'nano'
 
 __SOLUTION__
 
-Looking at the source:
-```c
-#include <stdio.h>
-#include <string.h>
+```
+wget https://2018shell.picoctf.com/static/725b533a89a0e70b85b37ce2965da003/absolutely-relative --no-check-certificate
+wget https://2018shell.picoctf.com/static/725b533a89a0e70b85b37ce2965da003/absolutely-relative.c --no-check-certificate
 
-#define yes_len 3
-const char *yes = "yes";
-
-int main()
-{
-    char flag[99];
-    char permission[10];
-    int i;
-    FILE * file;
+sshpass -p <PASS> ssh luk6xff@2018shell4.picoctf.com
 
 
-    file = fopen("/problems/absolutely-relative_0_d4f0f1c47f503378c4bb81981a80a9b6/flag.txt" , "r");
-    if (file) {
-        while (fscanf(file, "%s", flag)!=EOF)
-        fclose(file);
-    }
+luk6xff@pico-2018-shell:~$ cd /problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee
+luk6xff@pico-2018-shell:/problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee$ ls
+absolutely-relative  absolutely-relative.c  flag.txt
+luk6xff@pico-2018-shell:/problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee$ cat flag.txt
+cat: flag.txt: Permission denied
+luk6xff@pico-2018-shell:/problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee$ ls -la
+total 76
+drwxr-xr-x   2 root       root                   4096 Mar 25  2019 .
+drwxr-x--x 556 root       root                  53248 Mar 25  2019 ..
+-rwxr-sr-x   1 hacksports absolutely-relative_2  8984 Mar 25  2019 absolutely-relative
+-rw-rw-r--   1 hacksports hacksports              796 Mar 25  2019 absolutely-relative.c
+-r--r-----   1 hacksports absolutely-relative_2    37 Mar 25  2019 flag.txt
 
-    file = fopen( "./permission.txt" , "r");
-    if (file) {
-        for (i = 0; i < 5; i++){
-            fscanf(file, "%s", permission);
-        }
-        permission[5] = '\0';
-        fclose(file);
-    }
 
-    if (!strncmp(permission, yes, yes_len)) {
-        printf("You have the write permissions.\n%s\n", flag);
-    } else {
-        printf("You do not have sufficient permissions to view the flag.\n");
-    }
-
-    return 0;
-}
+luk6xff@pico-2018-shell:/$ cd ~ && touch permission.txt && echo yes > permission.txt
+luk6xff@pico-2018-shell:~$ /problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee/absolutely-relative
+You have the write permissions.
+picoCTF{3v3r1ng_1$_r3l3t1v3_372b3859}
 
 ```
-We can see that this program is looking for a file called `permission.txt` for granting us the permission to see the flag.
 
-So go to `~/` on shell by typing `cd ~/` and then make a file called `permission.tx` in that directory `echo "yes">permission.txt` and then run the program from this directory
-```
-> problems/absolutely-relative_0_d4f0f1c47f503378c4bb81981a80a9b6/absolutely-relative
-> You have the write permissions.
-picoCTF{3v3r1ng_1$_r3l3t1v3_befc0ce1}
-```
-
-FLAG - picoCTF{3v3r1ng_1$_r3l3t1v3_befc0ce1}
+FLAG - `picoCTF{3v3r1ng_1$_r3l3t1v3_372b3859}`

@@ -12,7 +12,7 @@ int main()
     FILE * file;
 
 
-    file = fopen("/problems/absolutely-relative_0_d4f0f1c47f503378c4bb81981a80a9b6/flag.txt" , "r");
+    file = fopen("/problems/absolutely-relative_2_69862edfe341b57b6ed2c62c7107daee/flag.txt" , "r");
     if (file) {
     	while (fscanf(file, "%s", flag)!=EOF)
     	fclose(file);

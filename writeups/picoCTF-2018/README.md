@@ -23,7 +23,7 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | [`ssh-keyz`](General-Skills/ssh-keyz/)           | 150    |
 | [`what base is this?`](General-Skills/what%20base%20is%20this?/)           | 200    |
 | [`you can’t see me`](General-Skills/you%20can’t%20see%20me/)| 200    |
-| [`absolutely relative`](General-Skills/absolutely%20relative/) | 250    |
+| [`absolutely relative`](General-Skills/absolutely%20relative)| 250 |
 | [`in out error`](General-Skills/in%20out%20error/)   | 275    |
 | [`store`](General-Skills/store/)           | 400    |
 
@@ -37,6 +37,7 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | [`Assembly-0`](Reversing/Assembly-0/)           | 150    |
 | [`be-quick-or-be-dead-1`](Reversing/be-quick-or-be-dead-1/)| 200    |
 | [`quackme`](Reversing/quackme/)| 200    |
+
 
 * __Cryptography__
 
