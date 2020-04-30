@@ -23,4 +23,5 @@ Search for `dns`, you'll be left with two entries, double click on the second on
 
 Then click on `Domain Name System (response)` there in the `Answers` field you'll see the flag.
 
-FLAG - `picoCTF{w4lt3r_wh1t3_2d6d3c6c75aa3be7f42debed8ad16e3b}`
+FLAG - `picoCTF{w4lt3r_wh1t3_33ddc9bcc77f22a319515c59736f64a2}`
+
