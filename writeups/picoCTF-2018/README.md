@@ -37,6 +37,10 @@ Writeup template mainly based on [the great mzfr template](https://github.com/mz
 | [`Assembly-0`](Reversing/Assembly-0/)           | 150    |
 | [`be-quick-or-be-dead-1`](Reversing/be-quick-or-be-dead-1/)| 200    |
 | [`quackme`](Reversing/quackme/)| 200    |
+| [`assembly-2`](Reversing/assembly-2)| 250   |
+| [``](Reversing/)|     |
+| [``](Reversing/)|     |
+| [``](Reversing/)|     |
 
 
 * __Cryptography__
