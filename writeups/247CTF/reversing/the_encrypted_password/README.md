@@ -46,11 +46,20 @@ Lets put a breakpoint there:
 (gef) layout asm
 ```
 
+I have finally just patched the binary by [reversing the jump](rev_jump.png)
 
+Then we got the flag:
+```
+luk6xff@pc:~/Projects/ctf/writeups/247CTF/reversing/the_encrypted_password$ ./encrypted_password-patched
+Enter the secret password:
+21212
+You found the flag!
+247CTF{141c85ccfb2ae19d8d8c224c4e403dce}
+```
 
 ## Flag
 ```
-247CTF{}
+247CTF{141c85ccfb2ae19d8d8c224c4e403dce}
 ```
 
 ### Authors
