@@ -23,11 +23,17 @@ We get this:
 [qemu](qemu.png)
 
 
+Run it under qemu
+```
+qemu-system-x86_64 -s -S -m 512 -fda flag.com
+```
+
 Now let's attach to the process
 ```
 gdb
-(gdb) target remote :1234
-(gef) gef-remote -q :1234
+(gdb) target remote localhost:1234
+or
+(gef) gef-remote -q localhost:1234 # Doesn't work properly
 ```
 
 ## Flag
